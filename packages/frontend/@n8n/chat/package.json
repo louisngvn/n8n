@@ -5,7 +5,7 @@
     "dev": "pnpm run storybook",
     "build": "pnpm build:vite && pnpm build:bundle",
     "build:vite": "node --max-old-space-size=8192 node_modules/vite/bin/vite.js build",
-    "build:bundle": "cross-env INCLUDE_VUE=true vite build",
+   "build:bundle": "cross-env INCLUDE_VUE=true node --max-old-space-size=6144 node_modules/vite/bin/vite.js build",
     "preview": "vite preview",
     "test:dev": "vitest",
     "test": "vitest run",
